@@ -32,7 +32,7 @@ const questions: Question[] = [
     id: "breakFrequency",
     question: "À quelle fréquence cassez-vous vos cordes ?",
     options: [
-      { label: "Très souvent (toutes les 1-2 semaines)", value: "often" },
+      { label: "Très souvent (plusieurs fois par semaine)", value: "often" },
       { label: "De temps en temps (1x par mois)", value: "sometimes" },
       { label: "Rarement (cordes usées avant de casser)", value: "rarely" },
     ],

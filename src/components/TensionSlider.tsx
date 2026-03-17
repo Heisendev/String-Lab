@@ -7,6 +7,10 @@ const TensionSlider = () => {
   const max = 70;
   const pct = ((tension - min) / (max - min)) * 100;
 
+  const tensionKg = Math.round(tension * 0.453592 * 10) / 10;
+  const minKg = Math.round(min * 0.453592 * 10) / 10;
+  const maxKg = Math.round(max * 0.453592 * 10) / 10;
+
   const power = Math.round(100 - pct);
   const control = Math.round(pct);
   const comfort = Math.round(100 - pct * 0.9);
@@ -36,7 +40,7 @@ const TensionSlider = () => {
             Guide Interactif de Tension
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Déplacez le curseur pour voir comment la tension (en lbs) affecte la
+            Déplacez le curseur pour voir comment la tension (en lbs / kg) affecte la
             puissance, le contrôle, le confort et le risque de blessure en temps réel.
           </p>
         </motion.div>
@@ -44,11 +48,16 @@ const TensionSlider = () => {
         <div className="mx-auto max-w-3xl rounded-2xl bg-card p-8 shadow-sm">
           <div className="mb-8">
             <div className="mb-2 flex justify-between text-sm font-medium text-muted-foreground">
-              <span>{min} lbs</span>
-              <span className={`font-display text-2xl font-black ${zone.color}`}>
-                {tension} lbs
-              </span>
-              <span>{max} lbs</span>
+              <span>{min} lbs<br /><span className="text-xs">({minKg} kg)</span></span>
+              <div className="text-center">
+                <span className={`font-display text-2xl font-black ${zone.color}`}>
+                  {tension} lbs
+                </span>
+                <span className={`block text-sm font-semibold ${zone.color}`}>
+                  {tensionKg} kg
+                </span>
+              </div>
+              <span className="text-right">{max} lbs<br /><span className="text-xs">({maxKg} kg)</span></span>
             </div>
             <input
               type="range"
