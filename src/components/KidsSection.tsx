@@ -133,7 +133,7 @@ const KidsSection = () => {
               <tbody>
                 {ageGroups.map((g) => (
                   <tr key={g.age} className="border-b border-border last:border-0">
-                    <td className="px-6 py-3 font-semibold text-primary">{g.age}</td>
+                    <td className="px-3 text-center md:px-6 py-3 font-semibold text-primary">{g.age}</td>
                     <td className="px-6 py-3 text-muted-foreground">{g.racket}</td>
                     <td className="px-6 py-3 text-muted-foreground">{g.string}</td>
                     <td className="px-6 py-3 text-muted-foreground">{g.tension}</td>
