@@ -6,6 +6,7 @@ import TensionSlider from "@/components/TensionSlider";
 import InjuryPrevention from "@/components/InjuryPrevention";
 import StringQuiz from "@/components/StringQuiz";
 import Footer from "@/components/Footer";
+import KidsSection from "@/components/KidsSection";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Hero />
       <StringTypes />
       <GaugeGuide />
+      <KidsSection />
       <TensionSlider />
       <InjuryPrevention />
       <StringQuiz />
