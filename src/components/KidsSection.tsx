@@ -25,15 +25,7 @@ const tips = [
       "La jauge 16 (1.30mm) offre un bon équilibre durabilité/confort. La 17 (1.25mm) apporte plus de toucher pour les juniors avancés.",
     color: "text-clay",
     bg: "bg-clay/10",
-  },
-  {
-    icon: AlertTriangle,
-    title: "Recorder souvent",
-    description:
-      "Les cordes perdent leur tension avec le temps. Pour les enfants, recorder toutes les 6–8 semaines même sans casse, pour garder confort et performance.",
-    color: "text-purple",
-    bg: "bg-purple/10",
-  },
+  }
 ];
 
 const ageGroups = [
@@ -84,7 +76,7 @@ const KidsSection = () => {
         </motion.div>
 
         {/* Tips grid */}
-        <div className="mb-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {tips.map((tip, i) => (
             <motion.div
               key={tip.title}
@@ -133,7 +125,7 @@ const KidsSection = () => {
               <tbody>
                 {ageGroups.map((g) => (
                   <tr key={g.age} className="border-b border-border last:border-0">
-                    <td className="px-3 text-center md:px-6 py-3 font-semibold text-primary">{g.age}</td>
+                    <td className="px-3 text-center md:text-left md:px-6 py-3 font-semibold text-primary">{g.age}</td>
                     <td className="px-6 py-3 text-muted-foreground">{g.racket}</td>
                     <td className="px-6 py-3 text-muted-foreground">{g.string}</td>
                     <td className="px-6 py-3 text-muted-foreground">{g.tension}</td>
